@@ -14,7 +14,10 @@ I have been using Windows since XP, and have become very comfortable with it. I 
 
 <img src="images/ubuntu.svg" width="18px" height="18px" /> Ubuntu 22.04
 
-> What? I thought you said you use Windows? 🤔
+<!-- prettier-ignore -->
+```admonish quote title="&#x200b;"
+What? I thought you said you use Windows? 🤔
+```
 
 Oh, right 😅. Did I forget to mention... I use WSL 2 on Windows 11 for my day-to-day development.
 
@@ -54,25 +57,63 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 Once installed, I can install any versions of Node.js I want (except for `v999`):
 
+<!-- prettier-ignore -->
+~~~admonish example title="&#x200b;"
 ```bash
 nvm install 1
 nvm use 1
 ```
+~~~
 
-> [!NOTE]
-> Do not actually install Node.js version `1`. It is just an example.
+<!-- prettier-ignore -->
+```admonish title="​&#x200b;​"
+Do not actually install Node.js version `1`. It is just an example.
+```
 
 ### Rust
 
+<div style="display:flex;justify-content:center;"><img src="images/one-does-not-rust.png" alt="one does not simply rewrite it in rust" width="320px" /></div>
+
+...but I usually do.
+
+Rust is more than just a programming language or a compiler. It is a community of developers who are passionate about building fast, reliable, and efficient software.
+
+```admonish tldr
+Rust makes things go BRRRR!
+```
+
 #### `rustup`
 
-#### `cargo`
+With that community comes an ecosystem of tools. The brilliant thing about this ecosystem is that it is not the hodge-podge of tools that you find in the JavaScript ecosystem. The tools are all designed to work together, and they all work well together. Part of this is because the main tooling is developed by the same people who develop the language itself.
 
-#### `rustc`
+Which brings us to `rustup` - the Rust toolchain installer:
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+Rustup handles installing `rustc` and `cargo`. `rustc` is the Rust compiler, and `cargo` is the Rust package manager.
+
+<!-- prettier-ignore -->
+```admonish summary title="&#x200b;"
+`rustup` is to `rustc` is to `cargo` as `nvm` is to `node` is to `npm`.
+```
 
 ### Docker Desktop
 
+<div style="display:flex;justify-content:center;"><img src="images/one-does-not-docker.png" alt="one does not simply dockerize it" width="320px" /></div>
+
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) is a tool for developers and sysadmins to develop, deploy, and run applications with containers. I use it to deplete my drive space with containers.
+
 ### MongoDB
+
+<div style="display:flex;justify-content:center;"><img src="images/mongodb-board.png" alt="friends don't let real friends use relational databases" width="320px" /></div>
+
+I guess if you program in JavaScript, you have to use MongoDB. I don't know why, but it is what it is. 🤷‍♂️
+
+<!-- TODO: Discuss MongoDB in WSL -->
+
+---
 
 [^1]: [WSL Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
 
