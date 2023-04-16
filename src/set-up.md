@@ -113,6 +113,92 @@ I guess if you program in JavaScript, you have to use MongoDB. I don't know why,
 
 <!-- TODO: Discuss MongoDB in WSL -->
 
+Setting up MongoDB on WSL can be a pain. In general, be sure to follow the [Install MongoDB on Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) docs.
+
+<!-- prettier-ignore -->
+```admonish note title="&#x200b;​"
+If you decide to use a different Linux distro, be sure to follow the docs for that distro.
+```
+
+After following those docs, you _might_ be able to start MongoDB with:
+
+```bash
+mongod
+```
+
+More likely, you will get an error like:
+
+<!-- prettier-ignore -->
+~~~admonish error
+```bash
+{
+  "t": {
+    "$date": "2023-04-16T20:27:21.912+01:00"
+  },
+  "s":"E",
+  "c":"CONTROL",
+  "id":20557,
+  "ctx":"initandlisten",
+  "msg":"DBException in initAndListen, terminating",
+  "attr": {
+    "error": "NonExistentPath: Data directory /data/db not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."
+  }
+}
+```
+~~~
+
+In which case, you would search this on the search engine of your choice: https://letmegooglethat.com/?q=mongodb+NonExistentPath%3A+Data+directory+%2Fdata%2Fdb+not+found.
+
+You might see an answer like:
+
+```bash
+sudo mkdir -p /data/db
+```
+
+Trying again, you would see this error:
+
+<!-- prettier-ignore -->
+~~~admonish error
+```bash
+{
+  "t": {
+    "$date": "2023-04-16T20:32:24.033+01:00"
+  },
+  "s": "E",
+  "c":"CONTROL",
+  "id":20557,
+  "ctx":"initandlisten",
+  "msg":"DBException in initAndListen,
+  terminating",
+  "attr": {
+    "error": "IllegalOperation: Attempted to create a lock file on a read-only directory: /data/db"
+  }
+}
+```
+~~~
+
+In which case, you would do even more searching:
+
+<div style="display:flex;justify-content:center;"><img src="images/google-engineer.png" alt="all programmers are google engineers" width="320px" /></div>
+
+Stumble upon something like:
+
+<!-- prettier-ignore -->
+~~~admonish info title="&#x200b;"
+```bash
+sudo chown $USER /data/db
+```
+~~~
+
+Now, you should be able to start MongoDB:
+
+<!-- prettier-ignore -->
+~~~admonish success
+```bash
+mongod
+```
+~~~
+
 ---
 
 [^1]: [WSL Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
