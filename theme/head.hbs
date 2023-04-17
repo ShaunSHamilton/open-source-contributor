@@ -4,7 +4,40 @@
   src="https://www.googletagmanager.com/gtag/js?id=G-PXTTS7HK4Z"
 ></script>
 <script>
-  window.dataLayer = window.dataLayer || []; function
-  gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config',
-  'G-PXTTS7HK4Z');
+  window.dataLayer = window.dataLayer || []; function gtag(){
+  dataLayer.push(arguments); } const modal = document.createElement('div');
+  modal.id = 'cookieModal'; modal.innerHTML = ` <div id="modal-content"> <div
+  id="modal-header"> <span class="close" onclick="closeModal()">&times;</span>
+  <h2 id="cookie-consent">Cookie Consent</h2> </div> <div id="modal-body"> <p>
+  Allow this website to anonymously track your viewership using Google
+  Analytics? </p> </div> <div id="modal-footer"> <button
+  onclick="loadAnalytics()">Accept</button> <button
+  onclick="noAnalytics()">Decline</button> </div> </div> `; window.onload =
+  function() { window.document.body.appendChild(modal); checkCookie(); }
+  function checkCookie() { const cookieValue = document.cookie.replace(
+  /(?:(?:^|.*;\s*)cookieConsent\s*\=\s*([^;]*).*$)|^.*$/, "$1" ); if
+  (cookieValue == "true") { gtag("js", new Date()); gtag("config",
+  "G-PXTTS7HK4Z", { anonymize_ip: true }); } else if (cookieValue == "false") {
+  return; } else {const modal = document.getElementById("cookieModal");
+  modal.style.display = "block"; } } function setCookie(value) { const date =
+  new Date(); date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000); const
+  expires = "; expires=" + date.toUTCString(); document.cookie =
+  "cookieConsent=" + value + expires + "; path=/"; } function loadAnalytics() {
+  setCookie("true"); gtag("js", new Date()); gtag("config", "G-PXTTS7HK4Z", {
+  anonymize_ip: true }); closeModal(); } function noAnalytics() {
+  setCookie("false"); closeModal(); } function closeModal() { const modal =
+  document.getElementById("cookieModal"); modal.style.display = "none"; }
 </script>
+<style>
+  #cookieModal { display: none; position: fixed; z-index: 1; padding-bottom:
+  10px; left: 0; bottom: 0; width: 100%; min-height: 100px; overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); } #modal-content { background-color:
+  #558d8e; margin: auto; padding: 5px; border: 1px solid #888; width: 80%; }
+  .close { color: #000000; float: right; font-size: 28px; font-weight: bold; }
+  .close:hover, .close:focus { color: #000; background-color: chartreuse;
+  text-decoration: none; cursor: pointer; } #cookie-consent { margin: 0;
+  padding-right: 20px; } #modal-header { display: flex; justify-content:
+  space-between; align-items: center; } #modal-body { display: inline-block; }
+  #modal-footer { display: inline-block; } #modal-footer button { margin-left:
+  10px; } #modal-footer button:hover { cursor: pointer; }
+</style>
