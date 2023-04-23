@@ -41,7 +41,7 @@ No title is shown, and the cute little icon is not shown
 ```
 ````
 
-🤔But you want no title, and you want the cure little icon to be shown. How do you do that?
+🤔But you want no title, and you want the cute little icon to be shown. How do you do that?
 
 A little bit of hacking, and you discover `title=" "` does not work, but `title="&#x200b;"` does. That is odd. A 🐛??
 

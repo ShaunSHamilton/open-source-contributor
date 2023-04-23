@@ -21,13 +21,13 @@ What? I thought you said you use Windows? 🤔
 
 Oh, right 😅. Did I forget to mention... I use WSL 2 on Windows 11 for my day-to-day development.
 
-Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux binary executables (in ELF format) natively on Windows 10 and Windows Server 2019. WSL provides a Linux-compatible kernel interface developed by Microsoft, which can then run Linux distributions in user mode on Windows [^1].
+Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux binary executables (in ELF format) natively on Windows 10+ and Windows Server 2019+. WSL provides a Linux-compatible kernel interface developed by Microsoft, which can then run Linux distributions in user mode on Windows [^1].
 
 ## Terminal
 
 <img src="images/windows-terminal.png" width="18px" /> Windows Terminal [^2]
 
-Powershell is useful and all, but it is difficult to use most developer tools with it; the software world has just leant towards using UNIX-like shells. I have found connecting to WSL though Windows Terminal to be convinient, as Windows Terminal allows mulitple terminal sessions in tabs.
+Powershell is useful and all, but it is difficult to use most developer tools with it; the software world has just leant towards using UNIX-like shells. I have found connecting to WSL though Windows Terminal to be convenient, as Windows Terminal allows multiple terminal sessions in tabs.
 
 ![split terminals](images/split-terminals.png)
 
@@ -111,8 +111,6 @@ Rustup handles installing `rustc` and `cargo`. `rustc` is the Rust compiler, and
 
 I guess if you program in JavaScript, you have to use MongoDB. I don't know why, but it is what it is. 🤷‍♂️
 
-<!-- TODO: Discuss MongoDB in WSL -->
-
 Setting up MongoDB on WSL can be a pain. In general, be sure to follow the [Install MongoDB on Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) docs.
 
 <!-- prettier-ignore -->
@@ -147,7 +145,7 @@ More likely, you will get an error like:
 ```
 ~~~
 
-In which case, you would search this on the search engine of your choice: https://letmegooglethat.com/?q=mongodb+NonExistentPath%3A+Data+directory+%2Fdata%2Fdb+not+found.
+In which case, you would search this on the search engine of your choice: <a href="https://letmegooglethat.com/?q=mongodb+NonExistentPath%3A+Data+directory+%2Fdata%2Fdb+not+found" target="_blank">Let Me Google That For You</a>.
 
 You might see an answer like:
 

@@ -167,7 +167,7 @@ Maybe you want to give credit to whoever suggested the change. You can do that b
 git commit -m "<SINGLE_LINE_MESSAGE>
 
 
-Co-authored-by: <NAME> <EMAIL>"
+Co-authored-by: <NAME> <<EMAIL>>"
 ```
 ~~~
 
