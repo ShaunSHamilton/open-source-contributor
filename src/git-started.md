@@ -19,7 +19,7 @@ git clone --depth=1 https://github.com/<USERNAME>/freeCodeCamp.git
 ```
 
 <!-- prettier-ignore -->
-~~~admonish example
+~~~admonish example collapsible=true
 ```bash
 git clone --depth=1 https://github.com/ShaunSHamilton/freeCodeCamp.git
 ```
@@ -75,7 +75,7 @@ git checkout -b <BRANCH_NAME>
 ```
 
 <!-- prettier-ignore -->
-~~~admonish example
+~~~admonish example collapsible=true
 ```bash
 git checkout -b fix_too-much-sound
 ```
@@ -118,7 +118,7 @@ git commit -m "<COMMIT_MESSAGE>"
 ```
 
 <!-- prettier-ignore -->
-~~~admonish example
+~~~admonish example collapsible=true
 ```bash
 git commit -m "fix(client): prevent sound on every render"
 ```
@@ -133,7 +133,7 @@ git push -u origin <BRANCH_NAME>
 ```
 
 <!-- prettier-ignore -->
-~~~admonish example
+~~~admonish example collapsible=true
 ```bash
 git push -u origin fix_too-much-sound
 ```
@@ -172,7 +172,7 @@ Co-authored-by: <NAME> <<EMAIL>>"
 ~~~
 
 <!-- prettier-ignore -->
-~~~admonish example
+~~~admonish example collapsible=true
 ```bash
 git commit -m "emotify entire log message
 

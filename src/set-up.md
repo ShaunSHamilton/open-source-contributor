@@ -15,7 +15,7 @@ I have been using Windows since XP, and have become very comfortable with it. I 
 <img src="images/ubuntu.svg" width="18px" height="18px" /> Ubuntu 22.04
 
 <!-- prettier-ignore -->
-```admonish quote title="&#x200b;"
+```admonish quote
 What? I thought you said you use Windows? 🤔
 ```
 
@@ -58,15 +58,14 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 Once installed, I can install any versions of Node.js I want (except for `v999`):
 
 <!-- prettier-ignore -->
-~~~admonish example title="&#x200b;"
+~~~admonish example
 ```bash
 nvm install 1
 nvm use 1
 ```
 ~~~
 
-<!-- prettier-ignore -->
-```admonish title="​&#x200b;​"
+```admonish
 Do not actually install Node.js version `1`. It is just an example.
 ```
 
@@ -95,7 +94,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Rustup handles installing `rustc` and `cargo`. `rustc` is the Rust compiler, and `cargo` is the Rust package manager.
 
 <!-- prettier-ignore -->
-```admonish summary title="&#x200b;"
+```admonish summary
 `rustup` is to `rustc` is to `cargo` as `nvm` is to `node` is to `npm`.
 ```
 
@@ -114,7 +113,7 @@ I guess if you program in JavaScript, you have to use MongoDB. I don't know why,
 Setting up MongoDB on WSL can be a pain. In general, be sure to follow the [Install MongoDB on Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) docs.
 
 <!-- prettier-ignore -->
-```admonish note title="&#x200b;​"
+```admonish note
 If you decide to use a different Linux distro, be sure to follow the docs for that distro.
 ```
 
@@ -182,7 +181,7 @@ In which case, you would do even more searching:
 Stumble upon something like:
 
 <!-- prettier-ignore -->
-~~~admonish info title="&#x200b;"
+~~~admonish info
 ```bash
 sudo chown $USER /data/db
 ```
