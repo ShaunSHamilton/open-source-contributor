@@ -6,7 +6,7 @@ This details my own personal workflows, and describes the tools I use on a day-t
 
 ## Me
 
-I am a software developer at freeCodeCamp. I develop course and curricula content for freeCodeCamp, and I also develop the software used to deliver the content.
+I am a software developer at freeCodeCamp. I develop course and curricula content for freeCodeCamp, and I also develop the software used to deliver the content...
 
 I develop on the whole stack - front-end and back-end. I also develop on the heap - the database. I have developed a variety of courses, such as:
 
