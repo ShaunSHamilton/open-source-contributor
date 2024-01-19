@@ -1,15 +1,15 @@
-# Side Step
+# Side Step 
 
 The beauty of the open-source community is evident in its _"I see, therefore I fix"_ attitude. This is often the best way to get started, and to **keep going**; whilst developing your own projects, you will inevitably come across bugs in the tools you use. Why not fix them?
 
-## The Bug
+## The Bug 
 
 Let's say you are working on a project, and you come across a bug 🐛 in a tool you use. You can either:
 
-1. Ad-hoc fix the bug in just your own code
-2. Use a different tool
-3. Fork the tool, fix the bug, and use your fork
-4. Contribute to the tool
+1. Ad-hoc fix the bug in just your own code 
+2. Use a different tool 
+3. Fork the tool, fix the bug, and use your fork 
+4. Contribute to the tool 
 
 ```admonish hint
 Pick option 4.
